@@ -4,6 +4,8 @@ import ensias.mobilitymanagement.mobility.model.Student;
 import ensias.mobilitymanagement.mobility.service.StudentService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -20,11 +22,11 @@ public class StudentResource {
         this.studentService = studentService;
     }
 
-//    @GetMapping("/all")
-//    public ResponseEntity<List<Student>> getAllStudents() {
-//        List<Student> students = studentService.findAllStudents();
-//        return new ResponseEntity<>(students, HttpStatus.OK);
-//    }
+    @GetMapping("/all")
+    public ResponseEntity<List<Student>> getAllStudents() {
+        List<Student> students = studentService.findAllStudents();
+        return new ResponseEntity<>(students, HttpStatus.OK);
+    }
 
     @GetMapping("/students")
     public String getStudents(Model model) {
@@ -34,17 +36,17 @@ public class StudentResource {
     }
 
 
-//    @GetMapping("/find/{id}")
-//    public ResponseEntity<Student> findStudentById(@PathVariable("id") Long id) {
-//        Student student = studentService.findStudentById(id);
-//        return new ResponseEntity<>(student, HttpStatus.OK);
-//    }
+    @GetMapping("/find/{id}")
+    public ResponseEntity<Student> findStudentById(@PathVariable("id") Long id) {
+        Student student = studentService.findStudentById(id);
+        return new ResponseEntity<>(student, HttpStatus.OK);
+    }
 
-//    @PostMapping("/add")
-//    public ResponseEntity<Student> createStudent(@RequestBody Student student) {
-//        Student newStudent = studentService.addStudent(student);
-//        return new ResponseEntity<>(newStudent, HttpStatus.CREATED);
-//    }
+    @PostMapping("/addit")
+    public ResponseEntity<Student> createStudent(@RequestBody Student student) {
+        Student newStudent = studentService.addStudent(student);
+        return new ResponseEntity<>(newStudent, HttpStatus.CREATED);
+    }
 
     @GetMapping("/add")
     public String addStudent(Model model) {
@@ -58,11 +60,11 @@ public class StudentResource {
         studentService.addStudent(student);
         return "redirect:/students";
     }
-//    @PutMapping("/update")
-//    public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
-//        Student updatedStudent = studentService.updateStudent(student);
-//        return new ResponseEntity<>(updatedStudent, HttpStatus.OK);
-//    }
+    @PutMapping("/update")
+    public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
+        Student updatedStudent = studentService.updateStudent(student);
+        return new ResponseEntity<>(updatedStudent, HttpStatus.OK);
+    }
 
     @GetMapping("/update/{id}")
     public String updateForm(@PathVariable(value = "id") long id, Model model) {
@@ -71,11 +73,11 @@ public class StudentResource {
         return "updatestudent";
     }
 
-//    @DeleteMapping("/delete/{id}")
-//    public ResponseEntity<?> deleteStudent(@PathVariable("id") Long id) {
-//        studentService.deleteStudent(id);
-//        return new ResponseEntity<>(HttpStatus.OK);
-//    }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteStudent(@PathVariable("id") Long id) {
+        studentService.deleteStudent(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 @Transactional
 
     @GetMapping("/delete/{id}")

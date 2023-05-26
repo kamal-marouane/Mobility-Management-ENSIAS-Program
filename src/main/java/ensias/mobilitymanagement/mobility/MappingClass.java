@@ -72,8 +72,11 @@ public class MappingClass {
             int nbr_dd = (int) row.getCell(3).getNumericCellValue();
             int nbr_ec = (int) row.getCell(4).getNumericCellValue();
 
-            School school = new School(schoolName, country, city, nbr_dd, nbr_ec);
-            school = schoolRepo.save(school);
+            School school = schoolRepo.findSchoolBySchoolName(schoolName);
+            if(school==null){
+                school = new School(schoolName, country, city, nbr_dd, nbr_ec);
+                school = schoolRepo.save(school);
+            }
         }
 
         workbook.close();

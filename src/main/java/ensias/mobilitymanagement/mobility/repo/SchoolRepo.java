@@ -7,5 +7,6 @@ import java.util.Optional;
 @Repository
 public interface SchoolRepo extends JpaRepository<School, Long> {
     void deleteSchoolBySchoolId(Long schoolId);
+    School findSchoolBySchoolName(String schoolName);
     Optional<School> findSchoolBySchoolId(Long schoolId);
 }

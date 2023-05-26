@@ -30,6 +30,12 @@ public class Student implements Serializable {
 
     public Student() {}
 
+    public Student(Long studentId, String firstname, String lastname,String codeApogee) {
+        this.codeApogee = codeApogee;
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.studentId = studentId;
+    }
     public Student(Long studentId, String firstname, String lastname,String codeApogee,String eligible) {
         this.codeApogee = codeApogee;
         this.lastname = lastname;

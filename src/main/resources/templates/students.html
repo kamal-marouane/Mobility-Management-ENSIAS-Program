@@ -57,9 +57,6 @@
       </select>
     </div>
   </div>
-  <div class="filters">
-
-  </div>
   <div class ="filters-area-filter">
     <!-- filter by seuil S3 -->
     <div class="filters-area-filters-button-container">
@@ -69,15 +66,15 @@
       <input type="text" id="input-field-S3" class="filters-area-filters-input" >
     </div>
   </div>
-  <div class ="filters-area-filter">
-    <!-- filter by  d’absence -->
-    <div class="filters-area-filters-button-container">
-      <button id="show-input-absence">Filtre: nombre d'absence</button>
-    </div>
-    <div id="input-container-absence" style="display: none;">
-      <input type="text" id="input-field-abscence" class="filters-area-filters-input">
-    </div>
-  </div>
+<!--  <div class ="filters-area-filter">-->
+<!--    &lt;!&ndash; filter by  d’absence &ndash;&gt;-->
+<!--    <div class="filters-area-filters-button-container">-->
+<!--      <button id="show-input-absence">Filtre: nombre d'absence</button>-->
+<!--    </div>-->
+<!--    <div id="input-container-absence" style="display: none;">-->
+<!--      <input type="text" id="input-field-abscence" class="filters-area-filters-input">-->
+<!--    </div>-->
+<!--  </div>-->
   <div class ="filters-area-filter">
     <!-- filter by seuil 1A -->
     <div class="filters-area-filters-button-container">
@@ -87,16 +84,17 @@
       <input type="text" id="input-field-seuil1A" class="filters-area-filters-input">
     </div>
   </div>
-  <div class ="filters-area-filter">
-    <!-- filter by quota filière -->
-    <div class="filters-area-filters-button-container">
-      <button id="show-input-quota" >Filtre: quota filière</button>
-    </div>
-    <div id="input-container-quota" style="display: none;">
-      <input type="text" id="input-field-quota" class="filters-area-filters-input">
-    </div>
-  </div>
-  <button id="appliquer-filter" style="height: 30px;">Appliquer</button>
+<!--  <div class ="filters-area-filter">-->
+<!--    &lt;!&ndash; filter by quota filière &ndash;&gt;-->
+<!--    <div class="filters-area-filters-button-container">-->
+<!--      <button id="show-input-quota" >Filtre: quota filière</button>-->
+<!--    </div>-->
+<!--    <div id="input-container-quota" style="display: none;">-->
+<!--      <input type="text" id="input-field-quota" class="filters-area-filters-input">-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <button id="appliquer-filter" style="height: 30px;">Appliquer</button>-->
+  <input class="button-ajouter" type="button" id="appliquer-filter" value="Appliquer" style="height: 30px;">
 
 
 </div>
@@ -151,7 +149,7 @@
         </tbody>
       </table>
 
-      <button id="downloadBtn">Download Excel</button>
+      <input type="button" class="button-ajouter" value="Telecharger" id="downloadBtn">
       <script>
         const tbody = document.querySelector('#students-list tbody');
         const rows = Array.from(tbody.children);
@@ -202,32 +200,64 @@
           function printValues() {
             const studentTable = document.getElementById('students-list');
             var inputS3 = document.getElementById("input-field-S3");
-            var inputAbsence = document.getElementById("input-field-abscence");
             var inputSeuil1A = document.getElementById("input-field-seuil1A");
-            var inputQuota = document.getElementById("input-field-quota");
             if (inputS3.value === '') {
               inputS3.value = 0;
-            }
-            if (inputAbsence.value === '') {
-              inputAbsence.value = 0;
             }
             if (inputSeuil1A.value === '') {
               inputSeuil1A.value = 0;
             }
-            if (inputQuota.value === '') {
-              inputQuota.value = 0;
-            }
-            for (let j = 0; j < studentTable.rows.length; j++) {
-              const row = studentTable.rows[j];
-              const filiereName = row.cells[1].textContent;
-              if (selectedFiliere === filiereName) {
-                if (parseFloat(row.cells[5].innerText) >= parseFloat(inputS3.value)) {
-                  row.cells[6].innerText = "true";
+            if(inputS3.value!=0 && inputSeuil1A.value!=0){
+              for (let j = 0; j < studentTable.rows.length; j++) {
+                const row = studentTable.rows[j];
+                const filiereName = row.cells[1].textContent;
+                if (selectedFiliere === filiereName) {
+                  if (parseFloat(row.cells[5].innerText) >= parseFloat(inputS3.value)
+                          && parseFloat(row.cells[3].innerText) >= parseFloat(inputSeuil1A.value) ) {
+                    row.cells[6].innerText = "true";
+                  } else  row.cells[6].innerText = "false";
+                }
+              }
+            } else if(inputS3.value!=0){
+              for (let j = 0; j < studentTable.rows.length; j++) {
+                const row = studentTable.rows[j];
+                const filiereName = row.cells[1].textContent;
+                if (selectedFiliere === filiereName) {
+                  if (parseFloat(row.cells[5].innerText) >= parseFloat(inputS3.value)) {
+                    row.cells[6].innerText = "true";
+                  } else  row.cells[6].innerText = "false";
                 }
               }
             }
+          }});
+        var appliquerButton = document.getElementById("appliquer-filter");
+        appliquerButton.addEventListener("click", for1A);
+
+        function for1A() {
+          const studentTable = document.getElementById('students-list');
+          var inputS3 = document.getElementById("input-field-S3");
+          var inputSeuil1A = document.getElementById("input-field-seuil1A");
+          if (inputS3.value === '') {
+            inputS3.value = 0;
           }
-        });
+          if (inputAbsence.value === '') {
+            inputAbsence.value = 0;
+          }
+          if (inputSeuil1A.value === '') {
+            inputSeuil1A.value = 0;
+          }
+          if (inputQuota.value === '') {
+            inputQuota.value = 0;
+          }
+          if (inputS3.value == 0 && inputSeuil1A.value != 0) {
+            for (let j = 0; j < studentTable.rows.length; j++) {
+              const row = studentTable.rows[j];
+              if (parseFloat(row.cells[3].innerText) >= parseFloat(inputSeuil1A.value)) {
+                row.cells[6].innerText = "true";
+              } else row.cells[6].innerText = "false";
+            }
+          }
+        }
 
 
 
@@ -350,7 +380,7 @@
 
 </body>
 </html>
-<script th:src="@{/javascript/filters.js}"></script>
+<script th:src="@{/javascript/filtrer.js}"></script>
 <script th:src="@{/javascript/searchStudent.js}"></script>
 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 

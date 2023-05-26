@@ -4,6 +4,16 @@
     justify-content: center;
 }
 
+img.header_image{
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 50px !important;
+}
+img.header_image_um5{
+    width: 30px ;
+    height: 30px;
+}
+
 .button-ajouter {
     margin-right: 5px;
     appearance: none;
