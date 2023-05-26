@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb8da000-7704-45fd-bc88-06680c3ebc9b" name="Changes" comment="docker commit">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myDockerFile" beforeDir="false" afterPath="$PROJECT_DIR$/myDockerFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myDockerFile" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,7 @@
         <option value="JavaScript File" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -114,7 +116,7 @@
       <workItem from="1683862735691" duration="1123000" />
       <workItem from="1683906008586" duration="24951000" />
       <workItem from="1684876515462" duration="2847000" />
-      <workItem from="1685040073200" duration="41631000" />
+      <workItem from="1685040073200" duration="42403000" />
     </task>
     <task id="LOCAL-00001" summary="2nd commit">
       <created>1685076060947</created>
@@ -235,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685091371055</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="docker commit">
+      <created>1685091671201</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685091671201</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
