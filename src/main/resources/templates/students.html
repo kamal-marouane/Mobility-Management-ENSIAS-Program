@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" th:href="@{/css/templatemo-digimedia-v1.css}">
+  <<link rel="stylesheet" th:href="@{/css/students.css}">
+
+</head>
+<body>
+<header class="header-area" data-wow-duration="0.75s" data-wow-delay="0s">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <form class="form-area">
+            <div class="form-area-div">
+              <input class="form-area-serach-input"type="text" id="search" name="q">
+              <button class="form-area-serach-button"type="submit">Search</button>
+            </div>
+
+
+          </form>
+          <ul class="nav">
+            <li class="scroll-to-section"><a th:href="@{/HomePage.html}">Accueil</a></li>
+            <li class="scroll-to-section"><a th:href="@{/students}" class="active">Etudiants</a></li>
+            <li class="scroll-to-section"><a th:href="@{/schools}">Ecoles</a></li>
+          </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="filtres" class="filters-area">
+  <div class ="filters-area-filter">
+    <div class="filters-area-filters-button-container">
+      <button id="show-input-filier">Filtre: par filière</button>
+    </div>
+    <div id="input-container-filier" style="display: none;" >
+      <select name="cycle" id="major-type" class="filters-area-filters-input">
+        <option value="">-- Toutes les Filieres --</option>
+        <option value="GL"> GL </option>
+        <option value="GD"> GD </option>
+        <option value="SSE"> SSE </option>
+        <option value="BI&A"> BI&A </option>
+        <option value="IDF"> IDF </option>
+        <option value="2SCL"> 2SCL </option>
+        <option value="IDSIT"> IDSIT </option>
+        <option value="IA"> IA </option>
+        <option value="SSI"> SSI </option>
+      </select>
+    </div>
+  </div>
+  <div class="filters">
+
+  </div>
+  <div class ="filters-area-filter">
+    <!-- filter by seuil S3 -->
+    <div class="filters-area-filters-button-container">
+      <button id="show-input-S3">Filtre: seuil filière S3</button>
+    </div>
+    <div id="input-container-S3" style="display: none;">
+      <input type="text" id="input-field-S3" class="filters-area-filters-input" >
+    </div>
+  </div>
+  <div class ="filters-area-filter">
+    <!-- filter by  d’absence -->
+    <div class="filters-area-filters-button-container">
+      <button id="show-input-absence">Filtre: nombre d'absence</button>
+    </div>
+    <div id="input-container-absence" style="display: none;">
+      <input type="text" id="input-field-abscence" class="filters-area-filters-input">
+    </div>
+  </div>
+  <div class ="filters-area-filter">
+    <!-- filter by seuil 1A -->
+    <div class="filters-area-filters-button-container">
+      <button id="show-input-seuil1A">Filtre: seuil 1A</button>
+    </div>
+    <div id="input-container-seuil1A" style="display: none;">
+      <input type="text" id="input-field-seuil1A" class="filters-area-filters-input">
+    </div>
+  </div>
+  <div class ="filters-area-filter">
+    <!-- filter by quota filière -->
+    <div class="filters-area-filters-button-container">
+      <button id="show-input-quota" >Filtre: quota filière</button>
+    </div>
+    <div id="input-container-quota" style="display: none;">
+      <input type="text" id="input-field-quota" class="filters-area-filters-input">
+    </div>
+  </div>
+  <button id="appliquer-filter" style="height: 30px;">Appliquer</button>
+
+
+</div>
+
+
+
+<div class="col-md-12 ">
+  <div class="card mt-4">
+    <div class="card-body">
+      <p class="bot" align="end">
+        <a th:href="@{/add}"><input type="button" class="button-ajouter" onclick="" value="Ajouter"></a>
+      </p>
+      </br>
+      <table class="table table-bordered" id="students-list">
+        <thead>
+        <tr>
+          <th >APOGEE</th>
+          <th>Filiere actuelle 2A</th>
+          <th>Nom et Prénom</th>
+          <th>Moy global 1A</th>
+          <th>new Ranking</th>
+          <th>Note S3 avant rtp</th>
+          <th>Eligibilité S3</th>
+          <th>email</th>
+          <th>Télé</th>
+          <th>Ecole Affectée</th>
+          <th>decision</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student:${students}">
+          <td th:text="${student.codeApogee}"></td>
+          <td th:text="${student.filiere.getFiliereName()}" ></td>
+          <td th:text="${student.firstname + ' ' + student.lastname}"></td>
+          <td th:text="${student.note1A}"></td>
+          <td>1</td>
+          <td th:text="${student.noteS3}"></td>
+          <td th:text="${student.eligible}"></td>
+          <td th:text="${student.email}"></td>
+          <td th:text="${student.phone}"></td>
+          <td> </td>
+          <td>
+            <a th:href="@{/update/{id}(id=${student.studentId})}"
+               class="button-ajouter">Modifier</a>
+            <a th:href="@{/delete/{id}(id=${student.studentId})}" onclick="return confirmDelete(event, ${student.studentId})"
+               class="button-supprimer">Supprimer</a>
+<!--            <a th:href="@{/save}"-->
+<!--               class="button-save">Modifier</a>-->
+<!--            <form action="#" th:action="@{/save}" th:object="${student}" method="POST"></form>-->
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <button id="downloadBtn">Download Excel</button>
+      <script>
+        const tbody = document.querySelector('#students-list tbody');
+        const rows = Array.from(tbody.children);
+        const data = rows.map(row => ({
+          element: row,
+          value: parseFloat(row.children[3].textContent)
+        }));
+
+        data.sort((a, b) => b.value - a.value);
+
+        tbody.innerHTML = '';
+        data.forEach((item, index) => {
+          item.element.children[4].textContent = index + 1;
+          tbody.appendChild(item.element);
+        });
+      </script>
+
+      <script>
+        const studentTable = document.getElementById('students-list');
+        const filiereSelect = document.getElementById('major-type');
+
+        filiereSelect.addEventListener('change', (event) => {
+          var totalNoteS3 = 0;
+          var size = 0;
+          const selectedFiliere = filiereSelect.value;
+          var inputField = document.getElementById("input-field-S3");
+          for (let i = 0; i < studentTable.rows.length; i++) {
+            const row = studentTable.rows[i];
+            const filiereName = row.cells[1].textContent;
+            if (selectedFiliere === '' || selectedFiliere === filiereName) {
+              row.style.display = '';
+              if (i) {
+                size++;
+                var noteS3Cell = studentTable.rows[i].cells[5];
+                var noteS3Value = parseFloat(noteS3Cell.innerText);
+                totalNoteS3 += noteS3Value;
+              }
+            } else {
+              row.style.display = 'none';
+            }
+          }
+          if (size) {
+            inputField.value = parseFloat((totalNoteS3 / size).toFixed(2));
+          }
+          var appliquerButton = document.getElementById("appliquer-filter");
+          appliquerButton.addEventListener("click", printValues);
+
+          function printValues() {
+            const studentTable = document.getElementById('students-list');
+            var inputS3 = document.getElementById("input-field-S3");
+            var inputAbsence = document.getElementById("input-field-abscence");
+            var inputSeuil1A = document.getElementById("input-field-seuil1A");
+            var inputQuota = document.getElementById("input-field-quota");
+            if (inputS3.value === '') {
+              inputS3.value = 0;
+            }
+            if (inputAbsence.value === '') {
+              inputAbsence.value = 0;
+            }
+            if (inputSeuil1A.value === '') {
+              inputSeuil1A.value = 0;
+            }
+            if (inputQuota.value === '') {
+              inputQuota.value = 0;
+            }
+            for (let j = 0; j < studentTable.rows.length; j++) {
+              const row = studentTable.rows[j];
+              const filiereName = row.cells[1].textContent;
+              if (selectedFiliere === filiereName) {
+                if (parseFloat(row.cells[5].innerText) >= parseFloat(inputS3.value)) {
+                  row.cells[6].innerText = "true";
+                }
+              }
+            }
+          }
+        });
+
+
+
+      </script>
+
+
+
+
+
+
+
+      <script>
+        // Get the button element by its id
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        // Add a click event listener to the button
+        downloadBtn.addEventListener('click', () => {
+          // Get the table element by its id
+          const table = document.getElementById('students-list');
+          // Specify the indexes of the columns you want to include in the download
+          const columnIndexes = [0,1,2, 3, 4, 5, 6, 7, 8, 9] ;
+
+          // Extract the desired columns from the table
+          const filteredRows = Array.from(table.rows).map(row => {
+            const filteredCells = Array.from(row.cells)
+                    .filter((_, index) => columnIndexes.includes(index))
+                    .map(cell => cell.innerText);
+            return filteredCells ;
+          }) ;
+
+
+          // Convert the table to a worksheet
+          //const worksheet = XLSX.utils.table_to_sheet(table);
+          const worksheet = XLSX.utils.aoa_to_sheet(filteredRows);
+
+
+
+          // Create a workbook and add the worksheet
+          const workbook = XLSX.utils.book_new();
+          XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+
+          // Generate a data URL representing the workbook
+          const dataUrl = XLSX.write(workbook, { bookType: 'xlsx', type: 'base64' });
+
+          // Convert the data URL to a Blob object
+          const blob = b64toBlob(dataUrl, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+
+          // Create a download link and trigger the download
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(blob);
+          link.download = 'table.xlsx';
+          link.click();
+        });
+
+        // Helper function to convert a base64 string to a Blob object
+        function b64toBlob(b64Data, contentType = '', sliceSize = 512) {
+          const byteCharacters = atob(b64Data);
+          const byteArrays = [];
+
+          for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+            const slice = byteCharacters.slice(offset, offset + sliceSize);
+
+            const byteNumbers = new Array(slice.length);
+            for (let i = 0; i < slice.length; i++) {
+              byteNumbers[i] = slice.charCodeAt(i);
+            }
+
+            const byteArray = new Uint8Array(byteNumbers);
+            byteArrays.push(byteArray);
+          }
+
+          const blob = new Blob(byteArrays, { type: contentType });
+          return blob;
+        }
+      </script>
+
+<!--      <script>-->
+<!--        var appliquerButton = document.getElementById("appliquer-filter");-->
+<!--        appliquerButton.addEventListener("click", printValues);-->
+
+<!--        function printValues() {-->
+<!--          const studentTable = document.getElementById('students-list');-->
+<!--          var inputS3 = document.getElementById("input-field-S3");-->
+<!--          var inputAbsence = document.getElementById("input-field-abscence");-->
+<!--          var inputSeuil1A = document.getElementById("input-field-seuil1A");-->
+<!--          var inputQuota = document.getElementById("input-field-quota");-->
+<!--          if(inputS3.value === ''){-->
+<!--            inputS3.value=0;-->
+<!--          }-->
+<!--          if(inputAbsence.value === ''){-->
+<!--            inputAbsence.value=0;-->
+<!--          }-->
+<!--          if(inputSeuil1A.value === ''){-->
+<!--            inputSeuil1A.value=0;-->
+<!--          }-->
+<!--          if(inputQuota.value === ''){-->
+<!--            inputQuota.value=0;-->
+<!--          }-->
+<!--          for (let i = 1; i < studentTable.rows.length; i++) {-->
+<!--            const row = studentTable.rows[i];-->
+<!--            // alert(typeof row.cells[6].innerText);-->
+<!--            if (parseFloat(row.cells[5].innerText) >= parseFloat(inputS3.value)) {-->
+<!--              row.cells[6].innerText = "true";-->
+<!--            }-->
+<!--          }-->
+<!--          //-->
+<!--          // alert("Seuil S3: " + inputS3.value);-->
+<!--          // alert("Nombre d'absence: " + inputAbsence.value);-->
+<!--          // if(inputSeuil1A.value === ''){-->
+<!--          //   alert("It is null");-->
+<!--          // }-->
+<!--          // alert("Quota filière: " + inputQuota.value);-->
+<!--        }-->
+<!--      </script>-->
+
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<script th:src="@{/javascript/filters.js}"></script>
+<script th:src="@{/javascript/searchStudent.js}"></script>
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+
+

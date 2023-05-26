@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" th:href="@{/css/templatemo-digimedia-v1.css}">
+  <<link rel="stylesheet" th:href="@{/css/students.css}">
+
+</head>
+<body>
+<header class="header-area" data-wow-duration="0.75s" data-wow-delay="0s">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+
+          <form class="form-area">
+            <div class="form-area-div">
+              <input class="form-area-serach-input"type="text" id="search" name="q">
+              <button class="form-area-serach-button"type="submit">Search</button>
+            </div>
+
+
+          </form>
+          <ul class="nav">
+            <li class="scroll-to-section"><a th:href="@{/HomePage.html}">Accueil</a></li>
+            <li class="scroll-to-section"><a th:href="@{/students}" >Etudiants</a></li>
+            <li class="scroll-to-section"><a th:href="@{/schools}" class="active">Ecoles</a></li>
+          </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="col-md-12 ">
+  <div class="card mt-4">
+    <div class="card-body">
+      <p class="bot" align="end">
+        <a th:href="@{/schools/add}"><input type="button" class="button-ajouter" onclick="" value="Ajouter"></a>
+      </p>
+      <table class="table table-bordered" id="schools-list">
+        <thead>
+        <tr>
+          <th width="30%" align="center">Ecole</th>
+          <th width="17%" align="center">Pays</th>
+          <th width="20%" align="center">Ville</th>
+          <th width="18%" align="center">Nombre double-diplomation</th>
+          <th width="15%" align="center">Nombre d'échange</th>
+          <th >Décision</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="school:${schools}">
+          <td width="30%" th:text="${school.schoolName}"></td>
+          <td width="17%" th:text="${school.country}"></td>
+          <td width="20%" th:text="${school.city}"></td>
+          <td width="18%" th:text="${school.nbr_dd}"></td>
+          <td width="15%" th:text="${school.nbr_ec}"></td>
+          <td>
+            <a th:href="@{/schools/update/{id}(id=${school.schoolId})}"
+               class="button-ajouter">Modifier</a>
+            <a th:href="@{/schools/delete/{id}(id=${school.schoolId})}" onclick="return confirmDelete(event, ${student.studentId})"
+               class="button-supprimer">Supprimer</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+<script>
+  function confirmDelete(event, itemId) {
+    alert("POOOP");
+    event.preventDefault(); // prevent the default behavior of the link
+
+    // display a confirmation dialog box
+    const result = confirm('Are you sure you want to delete this item?');
+
+    // if the user confirms, redirect to the delete URL
+    if (result) {
+      window.location.href = '/delete/' + itemId;
+      return true;
+    }
+
+    // if the user cancels, do nothing
+    return false;
+  }
+</script>
+</html>
+<script th:src="@{/javascript/searchSchool.js}"></script>
