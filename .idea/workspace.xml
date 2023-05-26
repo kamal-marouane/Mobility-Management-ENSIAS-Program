@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb8da000-7704-45fd-bc88-06680c3ebc9b" name="Changes" comment="2nd commit">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ensias/mobilitymanagement/mobility/model/TestingCICD.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2Pfnj0gq2tLvi22Ugt2tq22n35k" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/Kamal/Desktop/MobilityManagementEnsiasLast",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "7393daff1b0755731b3c165b370c333a",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\mobility6\src\main\resources\Excel" />
+      <recent name="C:\Users\Kamal\Desktop\mobility\src\main\resources\static\images" />
+      <recent name="C:\Users\Kamal\Desktop\mobility\src\main\resources\static\javascript" />
+      <recent name="C:\Users\Kamal\Desktop\mobility\src\main\resources\static" />
+      <recent name="C:\Users\Kamal\Desktop\mobility\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kamal\Desktop\MobilityManagementEnsiasLast\src\main\resources\Excel" />
+      <recent name="C:\Users\Kamal\Desktop\mobility\src\main\resources\static\css" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ensias.mobilitymanagement.mobility.resource" />
+      <recent name="ensias.mobilitymanagement.mobility.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ensias.mobilitymanagement.mobility" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MobilityApplication">
+    <configuration name="FiliereServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mobility" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ensias.mobilitymanagement.mobility.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ensias.mobilitymanagement.mobility.service" />
+      <option name="MAIN_CLASS_NAME" value="ensias.mobilitymanagement.mobility.service.FiliereServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FiliereServiceTest.testFindFiliereById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mobility" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ensias.mobilitymanagement.mobility.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ensias.mobilitymanagement.mobility.service" />
+      <option name="MAIN_CLASS_NAME" value="ensias.mobilitymanagement.mobility.service.FiliereServiceTest" />
+      <option name="METHOD_NAME" value="testFindFiliereById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SchoolServiceTest.testFindAllSchools" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mobility" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ensias.mobilitymanagement.mobility.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ensias.mobilitymanagement.mobility.service" />
+      <option name="MAIN_CLASS_NAME" value="ensias.mobilitymanagement.mobility.service.SchoolServiceTest" />
+      <option name="METHOD_NAME" value="testFindAllSchools" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MobilityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mobility" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ensias.mobilitymanagement.mobility.MobilityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SchoolServiceTest.testFindAllSchools" />
+        <item itemvalue="JUnit.FiliereServiceTest.testFindFiliereById" />
+        <item itemvalue="JUnit.FiliereServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb8da000-7704-45fd-bc88-06680c3ebc9b" name="Changes" comment="" />
+      <created>1683857136962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683857136962</updated>
+      <workItem from="1683857137972" duration="3189000" />
+      <workItem from="1683862735691" duration="1123000" />
+      <workItem from="1683906008586" duration="24951000" />
+      <workItem from="1684876515462" duration="2847000" />
+      <workItem from="1685040073200" duration="35486000" />
+    </task>
+    <task id="LOCAL-00001" summary="2nd commit">
+      <created>1685076060947</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685076060947</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2nd commit">
+      <created>1685076804589</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685076804589</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2nd commit">
+      <created>1685082436395</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685082436396</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2nd commit">
+      <created>1685082613208</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685082613208</updated>
+    </task>
+    <task id="LOCAL-00005" summary="2nd commit">
+      <created>1685082967795</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685082967795</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2nd commit">
+      <created>1685083101842</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685083101842</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2nd commit">
+      <created>1685083233864</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685083233864</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2nd commit">
+      <created>1685083391401</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685083391401</updated>
+    </task>
+    <task id="LOCAL-00009" summary="2nd commit">
+      <created>1685083554554</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685083554554</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2nd commit">
+      <created>1685083740526</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685083740526</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2nd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2nd commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
