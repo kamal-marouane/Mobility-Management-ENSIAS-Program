@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb8da000-7704-45fd-bc88-06680c3ebc9b" name="Changes" comment="docker commit">
-      <change beforePath="$PROJECT_DIR$/myDockerFile" beforeDir="false" afterPath="$PROJECT_DIR$/myDockerFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bb8da000-7704-45fd-bc88-06680c3ebc9b" name="Changes" comment="docker commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +165,7 @@
       <workItem from="1683862735691" duration="1123000" />
       <workItem from="1683906008586" duration="24951000" />
       <workItem from="1684876515462" duration="2847000" />
-      <workItem from="1685040073200" duration="38479000" />
+      <workItem from="1685040073200" duration="39244000" />
     </task>
     <task id="LOCAL-00001" summary="2nd commit">
       <created>1685076060947</created>
@@ -268,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685086407277</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="docker commit">
+      <created>1685088523916</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685088523917</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
