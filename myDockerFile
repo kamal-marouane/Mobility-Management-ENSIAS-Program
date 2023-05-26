@@ -1,4 +1,4 @@
 FROM openjdk:8
-EXPOSE 8080
-ADD target/docker-jenkins-ENSIAS.jar docker-jenkins-ENSIAS.jar
+EXPOSE 8081
+ADD target/my-own-jenkins.jar y-own-jenkins.jar
 ENTRYPOINT ["java","-jar","/docker-jenkins-ENSIAS.jar"]
