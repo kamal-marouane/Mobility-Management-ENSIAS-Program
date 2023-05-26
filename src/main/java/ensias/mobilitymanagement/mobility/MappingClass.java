@@ -4,16 +4,14 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import ensias.mobilitymanagement.mobility.model.Filiere;
 import ensias.mobilitymanagement.mobility.model.School;
 import ensias.mobilitymanagement.mobility.model.Student;
-import ensias.mobilitymanagement.mobility.repo.FiliereRepo;
 import ensias.mobilitymanagement.mobility.repo.SchoolRepo;
 import ensias.mobilitymanagement.mobility.repo.StudentRepo;
+import ensias.mobilitymanagement.mobility.repo.FiliereRepo;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Optional;
 
 public class MappingClass {
     public static void studentReading(String path, StudentRepo studentRepo, FiliereRepo filiereRepo) throws IOException {

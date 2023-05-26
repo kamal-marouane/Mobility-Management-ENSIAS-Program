@@ -2,7 +2,7 @@ package ensias.mobilitymanagement.mobility.service;
 
 import ensias.mobilitymanagement.mobility.exception.StudentNotFoundException;
 import ensias.mobilitymanagement.mobility.model.Student;
-import ensias.mobilitymanagement.mobility.repo.*;
+import ensias.mobilitymanagement.mobility.repo.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,6 @@
 package ensias.mobilitymanagement.mobility.resource;
 
 import ensias.mobilitymanagement.mobility.model.School;
-import ensias.mobilitymanagement.mobility.model.Student;
 import ensias.mobilitymanagement.mobility.service.SchoolService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
