@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb8da000-7704-45fd-bc88-06680c3ebc9b" name="Changes" comment="docker commit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/styleHP.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/UM5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ensias.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/javascript/filtrer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ensias/mobilitymanagement/mobility/resource/FiliereResourceIntgTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ensias/mobilitymanagement/mobility/resource/FiliereResourceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ensias/mobilitymanagement/mobility/resource/SchoolResourceIntgTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ensias/mobilitymanagement/mobility/resource/SchoolResourceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ensias/mobilitymanagement/mobility/resource/StudentResourceIntgTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ensias/mobilitymanagement/mobility/resource/StudentResourceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ensias/mobilitymanagement/mobility/service/FiliereServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ensias/mobilitymanagement/mobility/service/SchoolServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ensias/mobilitymanagement/mobility/service/StudentServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ensias/mobilitymanagement/mobility/MappingClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ensias/mobilitymanagement/mobility/MappingClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ensias/mobilitymanagement/mobility/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ensias/mobilitymanagement/mobility/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ensias/mobilitymanagement/mobility/repo/SchoolRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ensias/mobilitymanagement/mobility/repo/SchoolRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ensias/mobilitymanagement/mobility/resource/StudentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ensias/mobilitymanagement/mobility/resource/StudentResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/students.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/students.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/templatemo-digimedia-v1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/templatemo-digimedia-v1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/javascript/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/javascript/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/HomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/HomePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/students.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/students.html" afterDir="false" />
-    </list>
+    <list default="true" id="bb8da000-7704-45fd-bc88-06680c3ebc9b" name="Changes" comment="last commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +93,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MobilityApplication">
-    <configuration name="SchoolResourceIntgTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SchoolResourceIntgTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="mobility" />
       <extension name="coverage">
         <pattern>
@@ -132,7 +108,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentResourceIntgTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentResourceIntgTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="mobility" />
       <extension name="coverage">
         <pattern>
@@ -147,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentResourceIntgTest.testFindStudentById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentResourceIntgTest.testFindStudentById" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="mobility" />
       <extension name="coverage">
         <pattern>
@@ -163,7 +139,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentResourceIntgTest.testUpdateStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentResourceIntgTest.testUpdateStudent" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="mobility" />
       <extension name="coverage">
         <pattern>
@@ -179,7 +155,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentResourceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="mobility" />
       <extension name="coverage">
         <pattern>
@@ -201,15 +177,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.StudentResourceIntgTest" />
-        <item itemvalue="JUnit.StudentResourceIntgTest.testFindStudentById" />
-        <item itemvalue="JUnit.StudentResourceIntgTest.testUpdateStudent" />
-        <item itemvalue="JUnit.StudentResourceTest" />
-        <item itemvalue="JUnit.SchoolResourceIntgTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -223,7 +190,7 @@
       <workItem from="1683862735691" duration="1123000" />
       <workItem from="1683906008586" duration="24951000" />
       <workItem from="1684876515462" duration="2847000" />
-      <workItem from="1685040073200" duration="50977000" />
+      <workItem from="1685040073200" duration="51335000" />
     </task>
     <task id="LOCAL-00001" summary="2nd commit">
       <created>1685076060947</created>
@@ -358,7 +325,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685092355174</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="last commit">
+      <created>1685102791593</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685102791594</updated>
+    </task>
+    <task id="LOCAL-00021" summary="last commit">
+      <created>1685102845218</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1685102845218</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +360,8 @@
     <MESSAGE value="2nd commit" />
     <MESSAGE value="our commit for jenkins" />
     <MESSAGE value="docker commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker commit" />
+    <MESSAGE value="last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="last commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
